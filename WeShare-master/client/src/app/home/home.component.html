@@ -1,0 +1,63 @@
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">WeShareApp</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a  [routerLink]="['home']">Home</a></li>
+            <li><a [routerLink]="['nearitems']">Near Items</a></li>
+            <li><a [routerLink]="['additem']">Add Item</a></li>
+            <li><a [routerLink]="['fileuploader']">File Upload</a></li>
+            <li><a (click)="logOut()">Sign Out</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<div class="jumbotron"> </div>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<!--<div class="jumbotron">
+  <div class="container">
+    <h1>We Share, Every Body is Happy!</h1>
+    <p>Do you have anything you would like to share or give out? Well, you are in the right place. Do you need anything? Check
+      in our directory...</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Share Now &raquo;</a></p>
+  </div>
+</div> -->
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-sm-8 blog-main">
+
+      <router-outlet> </router-outlet>
+
+    </div>
+
+    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+  
+  <app-search></app-search>
+  
+   <div class="sidebar-module sidebar-module-inset">
+        <h2>Items Near You</h2>
+        <p>List of items near your location. </p>
+        <p><a class="btn btn-default" [routerLink]="['nearitems']" role="button">View more &raquo;</a></p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2017 WeShareApp.</p>
+  </footer>
+</div>
+<!-- /container -->
